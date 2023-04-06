@@ -1,7 +1,7 @@
 
 <!--Esto aplica solo a mi, David Galvan, ya que uso otro puerto -->
-<?php $urlBAse = "http://localhost:63342/ColStream_PHP/"?>
-<?php //$urlBAse = "http://localhost/ColStream_PHP/"?>
+<?php //$urlBAse = "http://localhost:63342/ColStream_PHP/"?>
+<?php $urlBAse = "http://localhost/ColStream_PHP/"?>
 
 <!doctype html>
 <html lang="en">
@@ -29,10 +29,10 @@
                 <a class="nav-link" href="<?php echo $urlBAse?>secciones/peliculas">Peliculas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo $urlBAse?>secciones/usuarios">Usuarios</a>
+                <a class="nav-link" href="<?php echo $urlBAse?>secciones/generos">Generos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo $urlBAse?>secciones/generos">Generos</a>
+                <a class="nav-link" href="<?php echo $urlBAse?>secciones/usuarios">Usuarios</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Cerrar sesión</a>
