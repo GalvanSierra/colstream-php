@@ -1,6 +1,17 @@
 <?php
 include("../../dataBase.php");
 
+if (isset($_GET['txtID'])) {
+    $idGenero = $_GET['txtID'];
+
+    $sql = "delete from generos where id = :id";
+    $sentencia = $conn->prepare($sql);
+    $sentencia->bindParam(":id", $idGenero);
+    $sentencia->execute();
+
+    header("Location:index.php");
+}
+
 $sql = "select * from generos";
 $sentencia = $conn->prepare($sql);
 $sentencia->execute();
@@ -38,8 +49,10 @@ $listaGeneros = $sentencia->fetchAll(PDO::FETCH_ASSOC);
                         <td><?= $genero['nombre'] ?></td>
                         <!-- <td>imagen.jpg</td> -->
                         <!-- <td>04/04/2023</td> -->
-                        <td><a name="btneditarG" id="btneditarG" class="btn btn-info" href="#" role="button">Editar</a>
-                            <a name="btneliminarG" id="btneliminarG" class="btn btn-danger" href="#"
+                        <td>
+                            <a name="btnEditarGenero" id="btnEditarGenero" class="btn btn-info" href="#" role="button">Editar</a>
+                            <a name="btnEliminarGenero" id="btnEliminarGenero" class="btn btn-danger"
+                               href="index.php?txtID= <?= $genero['id'] ?>"
                                role="button">Eliminar</a>
                         </td>
                     </tr>
