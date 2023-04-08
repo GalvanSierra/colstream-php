@@ -1,3 +1,17 @@
+<?php
+include("../../dataBase.php");
+
+if ($_POST) {
+    $nombre = $_POST["nombreGenero"];
+
+    $sql = "insert into generos (id, nombre) value (null,:nombre)";
+    $sentencia = $conn->prepare($sql);
+    $sentencia->bindParam(":nombre", $nombre);
+    $sentencia->execute();
+
+    header("Location:index.php");
+}
+?>
 <?php include("../../templates/header.php"); ?>
 
 <div class="card">
@@ -8,9 +22,10 @@
     <div class="card-body">
         <form action="" method="post" enctype="multipart/form-data">
             <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre:</label>
+                <label for="nombreGenero" class="form-label">Nombre:</label>
                 <input type="text"
-                       class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Nombre">
+                       class="form-control" name="nombreGenero" id="nombreGenero" aria-describedby="helpId"
+                       placeholder="Nombre">
             </div>
             <!--
                         <div class="mb-3">

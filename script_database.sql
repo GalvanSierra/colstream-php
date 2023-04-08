@@ -28,6 +28,14 @@ create table peliculas
     url_video    MEDIUMTEXT   not null
 );
 
+
+create table generos
+(
+    id     int AUTO_INCREMENT primary key,
+    nombre varchar(50) not null unique
+);
+
+
 create table actores
 (
     id     int AUTO_INCREMENT primary key,
@@ -38,12 +46,6 @@ create table directores
 (
     id     int AUTO_INCREMENT primary key,
     nombre varchar(50) not null
-);
-
-create table generos
-(
-    id     int AUTO_INCREMENT primary key,
-    nombre varchar(50) not null unique
 );
 
 -- Establecer relaciones entre las entidades

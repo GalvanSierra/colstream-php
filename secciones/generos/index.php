@@ -1,3 +1,11 @@
+<?php
+include("../../dataBase.php");
+
+$sql = "select * from generos";
+$sentencia = $conn->prepare($sql);
+$sentencia->execute();
+$listaGeneros = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+?>
 <?php include("../../templates/header.php"); ?>
 
 <br/>
@@ -16,22 +24,26 @@
             <table class="table">
                 <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Genero</th>
                     <!-- <th scope="col">Foto</th> -->
-                    <th scope="col">Fecha de creacion</th>
+                    <!-- <th scope="col">Fecha de creacion</th> -->
                     <th scope="col">Acciones</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="">
-                    <td scope="row">Terror</td>
-                    <!-- <td>imagen.jpg</td> -->
-                    <td>04/04/2023</td>
-                    <td><a name="btneditarG" id="btneditarG" class="btn btn-info" href="#" role="button">Editar</a>
-                        |<a name="btneliminarG" id="btneliminarG" class="btn btn-danger" href="#"
-                            role="button">Eliminar</a>
-                    </td>
-                </tr>
+                <?php foreach ($listaGeneros as $genero) { ?>
+                    <tr class="">
+                        <td scope="row"><?= $genero['id'] ?></td>
+                        <td><?= $genero['nombre'] ?></td>
+                        <!-- <td>imagen.jpg</td> -->
+                        <!-- <td>04/04/2023</td> -->
+                        <td><a name="btneditarG" id="btneditarG" class="btn btn-info" href="#" role="button">Editar</a>
+                            <a name="btneliminarG" id="btneliminarG" class="btn btn-danger" href="#"
+                               role="button">Eliminar</a>
+                        </td>
+                    </tr>
+                <?php } ?>
                 </tbody>
             </table>
         </div>
