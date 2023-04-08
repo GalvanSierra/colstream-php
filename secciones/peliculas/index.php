@@ -6,40 +6,41 @@
 
 <div class="card">
     <div class="card-header">
-        
-        <a name="" id="" class="btn btn-primary" 
-        href="crear.php" role="button">Agregar Pelicula
+
+        <a name="" id="" class="btn btn-primary"
+           href="crear.php" role="button">Agregar Película
         </a>
 
     </div>
     <div class="card-body">
 
-    <div class="table-responsive-sm">
-        <table class="table">
-            <thead>
+        <div class="table-responsive-sm">
+            <table class="table">
+                <thead>
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nombre</th>
-                    <th scope="col">Autores</th>
-                    <th scope="col">Fecha de Creacion</th>
+                    <th scope="col">Director</th>
+                    <th scope="col">Fecha de Estreno</th>
                     <th scope="col">URl</th>
                     <th scope="col">Acciones</th>
                 </tr>
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
                 <tr class="">
                     <td scope="row">1</td>
                     <td>YQse</td>
                     <td>COL</td>
                     <td>12/12/2019</td>
-                    <td>jkkdfjjwkw</td>
-                    <td><a name="btneditarP" id="btneditarP" class="btn btn-info" href="#" role="button">Editar</a>
-                        |<a name="btneliminarP" id="btneliminarP" class="btn btn-danger" href="#" role="button">Eliminar</a>
+                    <td>.......</td>
+                    <td><a name="btnEditarPelicula" id="btnEditarPelicula" class="btn btn-info" href="#" role="button">Editar</a>
+                        |<a name="btnEliminarPelicula" id="btnEliminarPelicula" class="btn btn-danger" href="#"
+                            role="button">Eliminar</a>
                 </tr>
 
-            </tbody>
-        </table>
-    </div>
+                </tbody>
+            </table>
+        </div>
 
     </div>
 
