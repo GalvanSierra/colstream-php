@@ -16,8 +16,11 @@ $sql = "select * from generos";
 $sentencia = $conn->prepare($sql);
 $sentencia->execute();
 $listaGeneros = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
-<?php include("../../templates/header.php"); ?>
+
+<?php
+include("../../templates/header.php"); ?>
 
 <br/>
 <h3> Generos </h3>
@@ -50,9 +53,9 @@ $listaGeneros = $sentencia->fetchAll(PDO::FETCH_ASSOC);
                         <!-- <td>imagen.jpg</td> -->
                         <!-- <td>04/04/2023</td> -->
                         <td>
-                            <a name="btnEditarGenero" id="btnEditarGenero" class="btn btn-info" href="#" role="button">Editar</a>
-                            <a name="btnEliminarGenero" id="btnEliminarGenero" class="btn btn-danger"
-                               href="index.php?txtID= <?= $genero['id'] ?>"
+                            <a class="btn btn-info" href="./editar.php?txtID=<?= $genero['id'] ?>"
+                               role="button">Editar</a>
+                            <a class="btn btn-danger" href="./index.php?txtID= <?= $genero['id'] ?>"
                                role="button">Eliminar</a>
                         </td>
                     </tr>
