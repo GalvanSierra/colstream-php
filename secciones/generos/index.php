@@ -40,8 +40,6 @@ include("../../templates/header.php"); ?>
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Genero</th>
-                    <!-- <th scope="col">Foto</th> -->
-                    <!-- <th scope="col">Fecha de creacion</th> -->
                     <th scope="col">Acciones</th>
                 </tr>
                 </thead>
@@ -50,8 +48,6 @@ include("../../templates/header.php"); ?>
                     <tr class="">
                         <td scope="row"><?= $genero['id'] ?></td>
                         <td><?= $genero['nombre'] ?></td>
-                        <!-- <td>imagen.jpg</td> -->
-                        <!-- <td>04/04/2023</td> -->
                         <td>
                             <a class="btn btn-info" href="./editar.php?txtID=<?= $genero['id'] ?>"
                                role="button">Editar</a>

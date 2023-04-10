@@ -15,13 +15,13 @@ if (isset($_GET['txtID'])) {
 
 if ($_POST) {
     print_r($_POST);
-    $id = $_POST["txtID"];
+    $idGenero = $_POST["txtID"];
     $nombreGenero = $_POST["nombreGenero"];
 
     $sql = "update generos set nombre = :nombre where id=:id";
     $sentencia = $conn->prepare($sql);
     $sentencia->bindParam(":nombre", $nombreGenero);
-    $sentencia->bindParam(":id", $id);
+    $sentencia->bindParam(":id", $idGenero);
     $sentencia->execute();
 
     header("Location:index.php");
@@ -53,7 +53,7 @@ if ($_POST) {
             </div>
 
 
-            <button type="submit" class="btn btn-success">Actaulzar Genero</button>
+            <button type="submit" class="btn btn-success">Actualizar Genero</button>
             <a name="" id="" class="btn btn-primary" href="index.php" role="button">Cancelar</a>
 
         </form>

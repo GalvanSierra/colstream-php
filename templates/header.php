@@ -1,7 +1,7 @@
 
 <!--Esto aplica solo a mi, David Galvan, ya que uso otro puerto -->
-<?php $urlBAse = "http://localhost:63342/ColStream_PHP/"?>
-<?php //$urlBAse = "http://localhost/ColStream_PHP/"?>
+<?php //$urlBAse = "http://localhost:63342/ColStream_PHP/"?>
+<?php $urlBAse = "http://localhost/ColStream_PHP/"?>
 
 <!doctype html>
 <html lang="en">

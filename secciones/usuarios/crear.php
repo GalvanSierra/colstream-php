@@ -1,3 +1,21 @@
+<?php
+include("../../dataBase.php");
+
+if ($_POST) {
+    $nickname = $_POST["nickname"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    $sql = "insert into usuarios (id, nickname, email, passsword) value (null,:nickname,:email,:password)";
+    $sentencia = $conn->prepare($sql);
+    $sentencia->bindParam(":nickname", $nickname);
+    $sentencia->bindParam(":email", $email);
+    $sentencia->bindParam(":password", $password);
+    $sentencia->execute();
+
+    header("Location:index.php");
+}
+?>
 <?php include("../../templates/header.php"); ?>
 
 <br>
@@ -17,29 +35,26 @@
             </div>
 
             <div class="mb-3">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password"
-                       class="form-control" name="password" id="password" aria-describedby="helpId"
-                       placeholder="Contraseña">
-            </div>
-
-            <div class="mb-3">
                 <label for="email" class="form-label">Correo</label>
                 <input type="email"
                        class="form-control" name="email" id="email" aria-describedby="helpId"
                        placeholder="Correo">
             </div>
 
-            <!--            <button type="submit" class="btn btn-success">Agregar Genero</button>-->
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password"
+                       class="form-control" name="password" id="password" aria-describedby="helpId"
+                       placeholder="Contraseña">
+            </div>
+
             <button type="submit" class="btn btn-success">Agregar registro</button>
             <a name="" id="" class="btn btn-primary" href="index.php" role="button">Cancelar</a>
-
 
         </form>
 
     </div>
     <div class="card-footer text-muted">
-        Footer
     </div>
 </div>
 
