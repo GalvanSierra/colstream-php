@@ -14,7 +14,6 @@ if (isset($_GET['txtID'])) {
     $nombrePelicula = $pelicula["titulo"];
     $sinopsisPelicula = $pelicula["sinopsis"];
     $fechaEstreno = $pelicula["release_date"];
-    $coverPelicula = $pelicula["cover"];
     $portadaPelicula = $pelicula["foto"];
     $URLPelicula = $pelicula["url_video"];
 }
@@ -25,16 +24,14 @@ if ($_POST) {
     $nombreP = $_POST["nombrePelicula"];
     $sinopsisP = $_POST["sinopsisPelicula"];
     $fechaE = $_POST["fechaEstreno"];
-    $coverP = $_POST["coverPelicula"];
     $URLP = $_POST["URLPelicula"];
 
-    $sql = "update peliculas set titulo = :nombrePelicula, sinopsis = :sinopsisPelicula, release_date = :fechaEstreno, cover = :coverPelicula, url_video = :URLPelicula where id = :id";
+    $sql = "update peliculas set titulo = :nombrePelicula, sinopsis = :sinopsisPelicula, release_date = :fechaEstreno, url_video = :URLPelicula where id = :id";
 
     $sentencia = $conn->prepare($sql);
     $sentencia->bindParam(":nombrePelicula", $nombreP);
     $sentencia->bindParam(":sinopsisPelicula", $sinopsisP);
     $sentencia->bindParam(":fechaEstreno", $fechaE);
-    $sentencia->bindParam(":coverPelicula", $coverP);
     $sentencia->bindParam(":id", $idPelicula);
 
     $sentencia->bindParam(":URLPelicula", $URLP);
@@ -107,14 +104,6 @@ if ($_POST) {
                 <input type="date" class="form-control" name="fechaEstreno" id="fechaEstreno"
                 value="<?= $fechaEstreno ?>"
                        aria-describedby="HelpId" placeholder="Fecha de estreno de la película">
-            </div>
-
-            <div class="mb-3">
-                <label for="coverPelicula" class="form-label">Cover de la pelicula:</label>
-                <input type="text"
-                value="<?= $coverPelicula ?>"
-                       class="form-control" name="coverPelicula" id="coverPelicula" aria-describedby="helpId"
-                       placeholder="Cover de la pelicula">
             </div>
 
             <div class="mb-3">

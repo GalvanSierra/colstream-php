@@ -55,7 +55,6 @@ $listaPeliculas = $sentencia->fetchAll(PDO::FETCH_ASSOC);
                     <th scope="col">Titulo</th>
                     <th scope="col">Sipnosis</th>
                     <th scope="col">Fecha de Estreno</th>
-                    <th scope="col">Cover</th>
                     <th scope="col">Foto</th>
                     <th scope="col">URL</th>
                 </tr>
@@ -67,7 +66,6 @@ $listaPeliculas = $sentencia->fetchAll(PDO::FETCH_ASSOC);
                         <td><?= $pelicula['titulo'] ?></td>
                         <td><?= $pelicula['sinopsis'] ?></td>
                         <td><?= $pelicula['release_date'] ?></td>
-                        <td><?= $pelicula['cover'] ?></td>
                         <td>
                             <img width = "50" src="<?= $pelicula['foto'] ?>" class="img-fluid rounded" alt="" />
                         </td>

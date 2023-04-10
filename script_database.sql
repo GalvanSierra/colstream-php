@@ -24,7 +24,6 @@ create table peliculas
     titulo       varchar(150) not null,
     sinopsis     varchar(300) not null,
     release_date date         not null,
-    cover        MEDIUMTEXT   not null,
     foto         varchar(255) not null,
     url_video    MEDIUMTEXT   not null
 );
