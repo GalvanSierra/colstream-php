@@ -35,7 +35,7 @@
                 <a class="nav-link" href="<?php echo $urlBAse?>secciones/usuarios">Usuarios</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Cerrar sesión</a>
+                <a class="nav-link" href="<?php echo $urlBAse?>./includes/logout.php">Cerrar sesión</a>
             </li>
         </ul>
     </nav>

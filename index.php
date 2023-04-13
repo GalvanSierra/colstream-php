@@ -7,7 +7,8 @@ $user = new User();
 
 if(isset($_SESSION['user'])){
     //echo "Hay sesión";
-    print_r("Hola");
+    $user->setUser($userSession->getCurrentUser());
+    include_once 'vistas/home.php';
 }else if(isset($_POST['email']) && isset($_POST['password'])){
     //echo "Validación de Login";
 
