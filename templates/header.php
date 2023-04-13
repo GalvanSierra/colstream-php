@@ -23,7 +23,7 @@
     <nav class="navbar navbar-expand navbar-light bg-light">
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="#" aria-current="page">Sistema <span class="visually-hidden">(current)</span></a>
+                <a class="nav-link active" href="<?php echo $urlBAse?>index.php" aria-current="page">Sistema <span class="visually-hidden">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo $urlBAse?>secciones/peliculas">Peliculas</a>
