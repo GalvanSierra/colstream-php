@@ -13,7 +13,7 @@ if (isset($_GET['txtID'])) {
 
     $nickname = $usuario["nickname"];
     $email = $usuario["email"];
-    $password = $usuario["passsword"];
+    $password = $usuario["password"];
 }
 
 if ($_POST) {
@@ -22,7 +22,7 @@ if ($_POST) {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $sql = "update usuarios set nickname = :nickname, email = :email, passsword = :password where id=:id";
+    $sql = "update usuarios set nickname = :nickname, email = :email, password = :password where id=:id";
     $sentencia = $conn->prepare($sql);
     $sentencia->bindParam(":nickname", $nickname);
     $sentencia->bindParam(":email", $email);

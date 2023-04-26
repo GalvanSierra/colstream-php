@@ -6,7 +6,7 @@ if ($_POST) {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $sql = "insert into usuarios (id, nickname, email, passsword) value (null,:nickname,:email,:password)";
+    $sql = "insert into usuarios (id, nickname, email, password) value (null,:nickname,:email,:password)";
     $sentencia = $conn->prepare($sql);
     $sentencia->bindParam(":nickname", $nickname);
     $sentencia->bindParam(":email", $email);
