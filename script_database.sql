@@ -9,7 +9,7 @@ create table usuarios
     id        int AUTO_INCREMENT primary key,
     nickname  varchar(40) not null,
     email     varchar(30) not null unique,
-    passsword varchar(32) not null
+    password varchar(32) not null
 );
 
 create table estados
