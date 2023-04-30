@@ -6,11 +6,11 @@
     <div class="card-header">
 
         <a name="" id="" class="btn btn-primary"
-           href="<?=URL_BASE?>usuario/renderRegistrarUsuario" role="button">Agregar Usuario
+           href="<?= URL_BASE ?>usuario/renderRegistrarUsuario" role="button">Agregar Usuario
         </a>
 
     </div>
-<!--    --><?php //var_dump($this->usuarios);?>
+    <!--    --><?php //var_dump($this->usuarios);?>
     <div class="card-body">
 
         <div class="table-responsive-sm">
@@ -30,14 +30,13 @@
                         <td scope="row"><?= $usuario->id ?></td>
                         <td><?= $usuario->nickname ?></td>
                         <td><?= $usuario->email ?></td>
-                        <td>****</td>
-<!--                        <td>-->
-<!--                            <a class="btn btn-info" href="./editar.php?txtID=--><?php //= $usuario['id'] ?><!--"-->
-<!--                               role="button">Editar</a>-->
-<!--                            <a class="btn btn-danger" href="./index.php?txtID= --><?php //= $usuario['id'] ?><!--"-->
-<!--                               role="button">Eliminar</a>-->
-<!--                        </td>-->
-
+                        <td>***********</td>
+                        <td>
+                            <a class="btn btn-info" href="<?= URL_BASE .'usuario/editarUsuario/' . $usuario->id?>"
+                               role="button">Editar</a>
+                            <a class="btn btn-danger" href="<?= URL_BASE .'usuario/eliminarUsuario/' . $usuario->id?>"
+                               role="button">Eliminar</a>
+                        </td>
                     </tr>
                 <?php } ?>
                 </tbody>

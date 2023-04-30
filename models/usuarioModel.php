@@ -43,4 +43,64 @@ class UsuarioModel extends Model
             return [];
         }
     }
+
+    public function getById($id)
+    {
+        $usuario = new UsuarioBD();
+
+        $sql = "select * from usuarios where id = :id";
+        $query = $this->db->connect()->prepare($sql);
+        $query->bindParam(":id", $id);
+
+        try {
+            $query->execute();
+
+            while ($row = $query->fetch()) {
+                $usuario->id = $row['id'];
+                $usuario->nickname = $row['nickname'];
+                $usuario->email = $row['email'];
+                $usuario->password = $row['password'];
+            }
+
+            return $usuario;
+        } catch (PDOException $e) {
+            return null;
+        }
+    }
+
+    public function update($usuario)
+    {
+
+        $sql = "UPDATE usuarios SET nickname = :nickname, email = :email, password = :password where id= :id";
+        $query = $this->db->connect()->prepare($sql);
+        $query->bindParam(':nickname', $usuario['nickname']);
+        $query->bindParam(':email', $usuario['email']);
+        $query->bindParam(':password', $usuario['password']);
+        $query->bindParam(':id', $usuario['id']);
+
+//        var_dump($query);
+        try {
+            $query->execute();
+//            echo  "mes";
+            return true;
+        } catch (PDOException $e) {
+            echo $e;
+            return false;
+        }
+    }
+
+    public function delete($id)
+    {
+        $sql = "delete from usuarios where id = :id";
+        $sentencia = $this->db->connect()->prepare($sql);
+        $sentencia->bindParam(":id", $id);
+
+        try {
+            $sentencia->execute();
+            return true;
+        } catch (PDOException $e) {
+            echo $e;
+            return false;
+        }
+    }
 }

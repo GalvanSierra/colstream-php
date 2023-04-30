@@ -19,7 +19,7 @@ class App
             return false;
         }
 
-        var_dump($url);
+//        var_dump($url);
 
         $archivoController = 'controllers/' . $url[0] . '.php';
 
@@ -29,8 +29,19 @@ class App
             $controller = new $url[0];
             $controller->loadModel($url[0]);
 
-            if (isset($url[1])) {
-                $controller->{$url[1]}();
+            $parameters = sizeof($url);
+
+            if ($parameters > 1) {
+                if ($parameters > 2) {
+                    $param = [];
+                    for ($i = 2; $i < $parameters; $i++) {
+                        $param[] = $url[$i];
+                    }
+//                    var_dump($param);
+                    $controller->{$url[1]}($param);
+                } else {
+                    $controller->{$url[1]}();
+                }
             } else {
                 $controller->render();
             }
