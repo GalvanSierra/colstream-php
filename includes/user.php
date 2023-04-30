@@ -1,8 +1,8 @@
 <?php
 
-include_once 'db.php';
+include_once 'DataBase.php';
 
-class User extends db{
+class User extends DataBase{
     private $nickname;
 
     public function userExists($user, $pass){

@@ -1,6 +1,6 @@
 <?php
 
-    class UserSession {
+    class serSession {
         public function __construct()
         {
             session_start();
