@@ -23,7 +23,19 @@ class Usuario extends Controller
     function registrarUsuario()
     {
         echo "Crear usuarios";
-        $this->model->insert();
+
+        $nickname = $_POST["nickname"];
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+
+        $usuario = [
+            'nickname' => $nickname,
+            'email' => $email,
+            'password' => $password
+        ];
+
+        $this->model->insert($usuario);
+
         require 'views/usuario/index.php';
 //        header(URL_BASE."usuario/index");
 
