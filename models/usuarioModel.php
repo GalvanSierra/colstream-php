@@ -1,4 +1,5 @@
 <?php
+include_once 'models/usuarioBD.php';
 
 class UsuarioModel extends Model
 {
@@ -17,5 +18,29 @@ class UsuarioModel extends Model
         $query->bindParam(":password", $usuario['password']);
         $query->execute();
         echo 'insertar datos en bd';
+    }
+
+    public function getUsuarios()
+    {
+        $items = [];
+
+        try {
+            $sql = "SELECT * FROM usuarios";
+            $query = $this->db->connect()->query($sql);
+
+            while ($row = $query->fetch()) {
+                $usuario = new UsuarioBD();
+                $usuario->id = $row['id'];
+                $usuario->nickname = $row['nickname'];
+                $usuario->email = $row['email'];
+                $usuario->password = $row['password'];
+
+                array_push($items, $usuario);
+            }
+
+            return $items;
+        } catch (PDOException $e) {
+            return [];
+        }
     }
 }

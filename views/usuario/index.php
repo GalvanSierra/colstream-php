@@ -6,10 +6,11 @@
     <div class="card-header">
 
         <a name="" id="" class="btn btn-primary"
-           href="<?=URL_BASE?>usuario/viewRegistrarUsuario" role="button">Agregar Usuario
+           href="<?=URL_BASE?>usuario/renderRegistrarUsuario" role="button">Agregar Usuario
         </a>
 
     </div>
+<!--    --><?php //var_dump($this->usuarios);?>
     <div class="card-body">
 
         <div class="table-responsive-sm">
@@ -24,21 +25,21 @@
                 </tr>
                 </thead>
                 <tbody>
-<!--                --><?php //foreach ($listaUsuarios as $usuario) { ?>
-<!--                    <tr class="">-->
-<!--                        <td scope="row">--><?php //= $usuario['id'] ?><!--</td>-->
-<!--                        <td>--><?php //= $usuario['nickname'] ?><!--</td>-->
-<!--                        <td>--><?php //= $usuario['email'] ?><!--</td>-->
-<!--                        <td>****</td>-->
+                <?php foreach ($this->usuarios as $usuario) { ?>
+                    <tr class="">
+                        <td scope="row"><?= $usuario->id ?></td>
+                        <td><?= $usuario->nickname ?></td>
+                        <td><?= $usuario->email ?></td>
+                        <td>****</td>
 <!--                        <td>-->
 <!--                            <a class="btn btn-info" href="./editar.php?txtID=--><?php //= $usuario['id'] ?><!--"-->
 <!--                               role="button">Editar</a>-->
 <!--                            <a class="btn btn-danger" href="./index.php?txtID= --><?php //= $usuario['id'] ?><!--"-->
 <!--                               role="button">Eliminar</a>-->
 <!--                        </td>-->
-<!---->
-<!--                    </tr>-->
-<!--                --><?php //} ?>
+
+                    </tr>
+                <?php } ?>
                 </tbody>
             </table>
         </div>

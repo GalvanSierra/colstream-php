@@ -31,7 +31,7 @@
                 <a class="nav-link" href="#">Generos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= URL_BASE ?>usuario/index">Usuarios</a>
+                <a class="nav-link" href="<?= URL_BASE ?>usuario">Usuarios</a>
             </li>
             <!--            <li class="nav-item">-->
             <!--                <a class="nav-link" href="#">Cerrar sesión</a>-->

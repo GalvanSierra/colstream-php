@@ -6,16 +6,20 @@ class Usuario extends Controller
     function __construct()
     {
         parent::__construct();
+        $this->view->usuarios = [];
 //        $this->index();
 //        $this->view->render('usuario/index');
     }
 
-    function index()
+    function render()
     {
+        $usuarios = $this->model->getUsuarios();
+        $this->view->usuarios = $usuarios;
         $this->view->render('usuario/index');
     }
 
-    function viewRegistrarUsuario()
+
+    function renderRegistrarUsuario()
     {
         $this->view->render('usuario/crear');
     }
@@ -36,7 +40,8 @@ class Usuario extends Controller
 
         $this->model->insert($usuario);
 
-        require 'views/usuario/index.php';
+        $this->render();
+//        require 'views/usuario/index.php';
 //        header(URL_BASE."usuario/index");
 
     }
