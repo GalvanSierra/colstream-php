@@ -1,36 +1,11 @@
 <?php
-include_once 'includes/user.php';
-include_once 'includes/user_session.php';
 
-$userSession = new UserSession();
-$user = new User();
+require_once './libs/controller.php';
+require_once './libs/model.php';
+require_once './libs/view.php';
+require_once './config/config.php';
+require_once './libs/dataBase.php';
 
-if(isset($_SESSION['user'])){
-    //echo "Hay sesión";
-    $user->setUser($userSession->getCurrentUser());
-    include_once 'vistas/home.php';
-}else if(isset($_POST['email']) && isset($_POST['password'])){
-    //echo "Validación de Login";
+require_once './libs/app.php';
 
-    $userForm = $_POST['email'];
-    $passForm = $_POST['password'];
-    
-    if($user->userExists($userForm, $passForm)){
-        //echo "Usuario Validado";
-        $userSession->setCurrentUser($userForm);
-        $user->setUser($userForm);
-
-        include_once 'vistas/home.php';
-    }else{
-        //echo "Email o contraseña incorrecta";
-        $errorLogin = "Email y/o contraseña incorrecta";
-        include_once 'vistas/login.php';
-    }
-
-}else{
-    include_once 'vistas/login.php';
-}
-
-?>
-
-<?php include("./templates/footer.php"); ?>
+$app = new App();
