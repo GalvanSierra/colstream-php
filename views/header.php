@@ -22,17 +22,20 @@
                         class="visually-hidden">(current)</span></a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="<?= URL_BASE ?>main">Inicio</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="">Peliculas</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Generos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="usuario">Usuarios</a>
+                <a class="nav-link" href="<?= URL_BASE ?>usuario/index">Usuarios</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Cerrar sesión</a>
-            </li>
+            <!--            <li class="nav-item">-->
+            <!--                <a class="nav-link" href="#">Cerrar sesión</a>-->
+            <!--            </li>-->
         </ul>
     </nav>
 </header>
