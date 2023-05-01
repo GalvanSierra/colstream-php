@@ -1,5 +1,5 @@
 <?php
-include_once 'models/usuarioBD.php';
+include_once 'models/generoBD.php';
 
 class GeneroModel extends Model
 {
@@ -9,33 +9,29 @@ class GeneroModel extends Model
         parent::__construct();
     }
 
-    public function insert($usuario)
+    public function insert($genero)
     {
-        $sql = "insert into usuarios (id, nickname, email, password) values (null,:nickname,:email,:password)";
+        $sql = "insert into generos (id, nombre) value (null,:nombre)";
         $query = $this->db->connect()->prepare($sql);
-        $query->bindParam(":nickname", $usuario['nickname']);
-        $query->bindParam(":email", $usuario['email']);
-        $query->bindParam(":password", $usuario['password']);
+        $query->bindParam(":nombre", $genero['nombre']);
+
         $query->execute();
-        echo 'insertar datos en bd';
     }
 
-    public function getUsuarios()
+    public function getGeneros()
     {
         $items = [];
 
         try {
-            $sql = "SELECT * FROM usuarios";
+            $sql = "SELECT * FROM generos";
             $query = $this->db->connect()->query($sql);
 
             while ($row = $query->fetch()) {
-                $usuario = new UsuarioBD();
-                $usuario->id = $row['id'];
-                $usuario->nickname = $row['nickname'];
-                $usuario->email = $row['email'];
-                $usuario->password = $row['password'];
+                $genero = new generoBD();
+                $genero->id = $row['id'];
+                $genero->nombre = $row['nombre'];
 
-                array_push($items, $usuario);
+                array_push($items, $genero);
             }
 
             return $items;

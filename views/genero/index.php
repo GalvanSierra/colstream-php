@@ -43,18 +43,20 @@
                 </tr>
                 </thead>
                 <tbody>
-<!--                --><?php //foreach ($listaGeneros as $genero) { ?>
-<!--                    <tr class="">-->
-<!--                        <td scope="row">--><?php //= $genero['id'] ?><!--</td>-->
-<!--                        <td>--><?php //= $genero['nombre'] ?><!--</td>-->
-<!--                        <td>-->
-<!--                            <a class="btn btn-info" href="editar.php?txtID=--><?php //= $genero['id'] ?><!--"-->
-<!--                               role="button">Editar</a>-->
-<!--                            <a class="btn btn-danger" href="./index.php?txtID= --><?php //= $genero['id'] ?><!--"-->
-<!--                               role="button">Eliminar</a>-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                --><?php //} ?>
+                <!--                --><?php //var_dump($this->generos);?>
+
+                <?php foreach ($this->generos as $genero) { ?>
+                    <tr class="">
+                        <td scope="row"><?= $genero->id ?></td>
+                        <td><?= $genero->nombre ?></td>
+                        <td>
+                            <a class="btn btn-info" href="#"
+                               role="button">Editar</a>
+                            <a class="btn btn-danger" href="#"
+                               role="button">Eliminar</a>
+                        </td>
+                    </tr>
+                <?php } ?>
                 </tbody>
             </table>
         </div>

@@ -7,13 +7,13 @@ class Genero extends Controller
     function __construct()
     {
         parent::__construct();
-//        $this->view->usuarios = [];
+        $this->view->generos = [];
     }
 
     function render()
     {
-//        $usuarios = $this->model->getUsuarios();
-//        $this->view->usuarios = $usuarios;
+        $generos = $this->model->getGeneros();
+        $this->view->generos = $generos;
         $this->view->render('genero/index');
     }
 
@@ -23,25 +23,19 @@ class Genero extends Controller
         $this->view->render('genero/crear');
     }
 
-    function registrarUsuario()
+    function registrarGenero()
     {
-        echo "Crear usuarios";
+//        echo "Crear usuarios";
 
-        $nickname = $_POST["nickname"];
-        $email = $_POST["email"];
-        $password = $_POST["password"];
+        $nombre = $_POST["nombre"];
 
-        $usuario = [
-            'nickname' => $nickname,
-            'email' => $email,
-            'password' => $password
+        $genero = [
+            'nombre' => $nombre,
         ];
 
-        $this->model->insert($usuario);
+        $this->model->insert($genero);
 
         $this->render();
-//        require 'views/usuario/index.php';
-//        header(URL_BASE."usuario/index");
     }
 
     function editarUsuario($param = null)
