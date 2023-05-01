@@ -10,7 +10,6 @@
         </a>
 
     </div>
-    <!--    --><?php //var_dump($this->usuarios);?>
     <div class="card-body">
 
         <div class="table-responsive-sm">
@@ -32,9 +31,9 @@
                         <td><?= $usuario->email ?></td>
                         <td>***********</td>
                         <td>
-                            <a class="btn btn-info" href="<?= URL_BASE .'usuario/editarUsuario/' . $usuario->id?>"
+                            <a class="btn btn-info" href="<?= URL_BASE . 'usuario/editarUsuario/' . $usuario->id ?>"
                                role="button">Editar</a>
-                            <a class="btn btn-danger" href="<?= URL_BASE .'usuario/eliminarUsuario/' . $usuario->id?>"
+                            <a class="btn btn-danger" href="<?= URL_BASE . 'usuario/eliminarUsuario/' . $usuario->id ?>"
                                role="button">Eliminar</a>
                         </td>
                     </tr>

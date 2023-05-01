@@ -7,7 +7,7 @@
     </div>
     <div class="card-body">
 
-        <form action="<?= URL_BASE?>/usuario/registrarUsuario" method="post" enctype="multipart/form-data">
+        <form action="<?= URL_BASE ?>/usuario/registrarUsuario" method="post" enctype="multipart/form-data">
 
             <div class="mb-3">
                 <label for="nickname" class="form-label">Nombre del usuario - nickname:</label>
