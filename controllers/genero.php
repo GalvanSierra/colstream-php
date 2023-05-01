@@ -74,11 +74,11 @@ class Genero extends Controller
         $this->view->render('genero/editar');
     }
 
-    function eliminarUsuario($param = null)
+    function eliminarGenero($param = null)
     {
-        $idUsuario = $param[0];
+        $idGenero = $param[0];
 
-        $this->model->delete($idUsuario);
+        $this->model->delete($idGenero);
 
         $this->render();
     }

@@ -81,10 +81,9 @@ class GeneroModel extends Model
 
     public function delete($id)
     {
-        $sql = "delete from usuarios where id = :id";
+        $sql = "delete from generos where id = :id";
         $sentencia = $this->db->connect()->prepare($sql);
         $sentencia->bindParam(":id", $id);
-
         try {
             $sentencia->execute();
             return true;

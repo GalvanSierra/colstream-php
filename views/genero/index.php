@@ -52,7 +52,7 @@
                         <td>
                             <a class="btn btn-info" href="<?= URL_BASE .'genero/editarGenero/' . $genero->id?>"
                                role="button">Editar</a>
-                            <a class="btn btn-danger" href="#"
+                            <a class="btn btn-danger" href="<?= URL_BASE .'genero/eliminarGenero/' . $genero->id?>"
                                role="button">Eliminar</a>
                         </td>
                     </tr>
