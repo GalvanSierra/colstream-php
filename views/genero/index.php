@@ -50,7 +50,7 @@
                         <td scope="row"><?= $genero->id ?></td>
                         <td><?= $genero->nombre ?></td>
                         <td>
-                            <a class="btn btn-info" href="#"
+                            <a class="btn btn-info" href="<?= URL_BASE .'genero/editarGenero/' . $genero->id?>"
                                role="button">Editar</a>
                             <a class="btn btn-danger" href="#"
                                role="button">Eliminar</a>

@@ -38,42 +38,40 @@ class Genero extends Controller
         $this->render();
     }
 
-    function editarUsuario($param = null)
+    function editarGenero($param = null)
     {
-        $idUsuario = $param[0];
-        $usuario = $this->model->getById($idUsuario);
+        $idGenero = $param[0];
+        $genero = $this->model->getById($idGenero);
 
-        $this->view->usuario = $usuario;
-        $this->view->render('usuario/editar');
+        $this->view->genero = $genero;
+        $this->view->render('genero/editar');
     }
 
-    function actualizarUsuario()
+    function actualizarGenero()
     {
         $id = $_POST["id"];
-        $nickname = $_POST["nickname"];
-        $email = $_POST["email"];
-        $password = $_POST["password"];
+        $nombre = $_POST["nombre"];
+//        $email = $_POST["email"];
+//        $password = $_POST["password"];
 
-        $usuarioQuery = [
+        $generoQuery = [
             'id' => $id,
-            'nickname' => $nickname,
-            'email' => $email,
-            'password' => $password
+            'nombre' => $nombre,
+//            'email' => $email,
+//            'password' => $password
         ];
 
 //        var_dump($usuarioQuery);
 
 //        $this->model->update($usuarioQuery);
-        if ($this->model->update($usuarioQuery)) {
-            $usuario = new UsuarioBD();
-            $usuario->id = $id;
-            $usuario->nickname = $nickname;
-            $usuario->email = $email;
-            $usuario->password = $password;
+        if ($this->model->update($generoQuery)) {
+            $genero = new generoBD();
+            $genero->id = $id;
+            $genero->nombre = $nombre;
 
-            $this->view->usuario = $usuario;
+            $this->view->genero = $genero;
         }
-        $this->view->render('usuario/editar');
+        $this->view->render('genero/editar');
     }
 
     function eliminarUsuario($param = null)

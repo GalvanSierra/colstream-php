@@ -42,9 +42,9 @@ class GeneroModel extends Model
 
     public function getById($id)
     {
-        $usuario = new UsuarioBD();
+        $genero = new generoBD();
 
-        $sql = "select * from usuarios where id = :id";
+        $sql = "select * from generos where id = :id";
         $query = $this->db->connect()->prepare($sql);
         $query->bindParam(":id", $id);
 
@@ -52,32 +52,26 @@ class GeneroModel extends Model
             $query->execute();
 
             while ($row = $query->fetch()) {
-                $usuario->id = $row['id'];
-                $usuario->nickname = $row['nickname'];
-                $usuario->email = $row['email'];
-                $usuario->password = $row['password'];
+                $genero->id = $row['id'];
+                $genero->nombre = $row['nombre'];
             }
 
-            return $usuario;
+            return $genero;
         } catch (PDOException $e) {
             return null;
         }
     }
 
-    public function update($usuario)
+    public function update($genero)
     {
 
-        $sql = "UPDATE usuarios SET nickname = :nickname, email = :email, password = :password where id= :id";
+        $sql = "update generos set nombre = :nombre where id=:id";
         $query = $this->db->connect()->prepare($sql);
-        $query->bindParam(':nickname', $usuario['nickname']);
-        $query->bindParam(':email', $usuario['email']);
-        $query->bindParam(':password', $usuario['password']);
-        $query->bindParam(':id', $usuario['id']);
+        $query->bindParam(":nombre", $genero['nombre']);
+        $query->bindParam(":id", $genero['id']);
 
-//        var_dump($query);
         try {
             $query->execute();
-//            echo  "mes";
             return true;
         } catch (PDOException $e) {
             echo $e;
