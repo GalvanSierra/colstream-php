@@ -1,34 +1,3 @@
-<?php
-//include("../../dataBase.php");
-//
-//if (isset($_GET['txtID'])) {
-//    $idGenero = $_GET['txtID'];
-//
-//    $sql = "select * from generos where id = :id";
-//    $sentencia = $conn->prepare($sql);
-//    $sentencia->bindParam(":id", $idGenero);
-//    $sentencia->execute();
-//
-//    $genero = $sentencia->fetch(PDO::FETCH_LAZY);
-//    $nombre = $genero["nombre"];
-//}
-//
-//if ($_POST) {
-//    print_r($_POST);
-//    $idGenero = $_POST["txtID"];
-//    $nombreGenero = $_POST["nombreGenero"];
-//
-//    $sql = "update generos set nombre = :nombre where id=:id";
-//    $sentencia = $conn->prepare($sql);
-//    $sentencia->bindParam(":nombre", $nombreGenero);
-//    $sentencia->bindParam(":id", $idGenero);
-//    $sentencia->execute();
-//
-//    header("Location:index.php");
-//}
-//?>
-
-
 <?php require 'views/header.php'; ?>
 
 <div class="card">

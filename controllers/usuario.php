@@ -8,8 +8,6 @@ class Usuario extends Controller
     {
         parent::__construct();
         $this->view->usuarios = [];
-//        $this->index();
-//        $this->view->render('usuario/index');
     }
 
     function render()
@@ -27,7 +25,6 @@ class Usuario extends Controller
 
     function registrarUsuario()
     {
-        echo "Crear usuarios";
 
         $nickname = $_POST["nickname"];
         $email = $_POST["email"];
@@ -42,8 +39,6 @@ class Usuario extends Controller
         $this->model->insert($usuario);
 
         $this->render();
-//        require 'views/usuario/index.php';
-//        header(URL_BASE."usuario/index");
     }
 
     function editarUsuario($param = null)
@@ -69,9 +64,7 @@ class Usuario extends Controller
             'password' => $password
         ];
 
-//        var_dump($usuarioQuery);
 
-//        $this->model->update($usuarioQuery);
         if ($this->model->update($usuarioQuery)) {
             $usuario = new UsuarioBD();
             $usuario->id = $id;

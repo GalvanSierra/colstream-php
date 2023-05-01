@@ -17,7 +17,6 @@ class UsuarioModel extends Model
         $query->bindParam(":email", $usuario['email']);
         $query->bindParam(":password", $usuario['password']);
         $query->execute();
-        echo 'insertar datos en bd';
     }
 
     public function getUsuarios()
@@ -78,10 +77,8 @@ class UsuarioModel extends Model
         $query->bindParam(':password', $usuario['password']);
         $query->bindParam(':id', $usuario['id']);
 
-//        var_dump($query);
         try {
             $query->execute();
-//            echo  "mes";
             return true;
         } catch (PDOException $e) {
             echo $e;

@@ -1,24 +1,3 @@
-<?php
-//include("../../dataBase.php");
-//
-//if (isset($_GET['txtID'])) {
-//    $idGenero = $_GET['txtID'];
-//
-//    $sql = "delete from generos where id = :id";
-//    $sentencia = $conn->prepare($sql);
-//    $sentencia->bindParam(":id", $idGenero);
-//    $sentencia->execute();
-//
-//    header("Location:index.php");
-//}
-//
-//$sql = "select * from generos";
-//$sentencia = $conn->prepare($sql);
-//$sentencia->execute();
-//$listaGeneros = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-//
-//?>
-
 <?php require 'views/header.php'; ?>
 
 <br/>
@@ -43,16 +22,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                <!--                --><?php //var_dump($this->generos);?>
 
                 <?php foreach ($this->generos as $genero) { ?>
                     <tr class="">
                         <td scope="row"><?= $genero->id ?></td>
                         <td><?= $genero->nombre ?></td>
                         <td>
-                            <a class="btn btn-info" href="<?= URL_BASE .'genero/editarGenero/' . $genero->id?>"
+                            <a class="btn btn-info" href="<?= URL_BASE . 'genero/editarGenero/' . $genero->id ?>"
                                role="button">Editar</a>
-                            <a class="btn btn-danger" href="<?= URL_BASE .'genero/eliminarGenero/' . $genero->id?>"
+                            <a class="btn btn-danger" href="<?= URL_BASE . 'genero/eliminarGenero/' . $genero->id ?>"
                                role="button">Eliminar</a>
                         </td>
                     </tr>

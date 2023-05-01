@@ -25,7 +25,6 @@ class Genero extends Controller
 
     function registrarGenero()
     {
-//        echo "Crear usuarios";
 
         $nombre = $_POST["nombre"];
 
@@ -51,19 +50,12 @@ class Genero extends Controller
     {
         $id = $_POST["id"];
         $nombre = $_POST["nombre"];
-//        $email = $_POST["email"];
-//        $password = $_POST["password"];
 
         $generoQuery = [
             'id' => $id,
             'nombre' => $nombre,
-//            'email' => $email,
-//            'password' => $password
         ];
 
-//        var_dump($usuarioQuery);
-
-//        $this->model->update($usuarioQuery);
         if ($this->model->update($generoQuery)) {
             $genero = new generoBD();
             $genero->id = $id;
