@@ -31,7 +31,7 @@
             </div>
 
             <button type="submit" class="btn btn-success">Agregar registro</button>
-            <a id="" class="btn btn-primary" href="index.php" role="button">Cancelar</a>
+            <a id="" class="btn btn-primary" href="<?= URL_BASE ?>usuario" role="button">Cancelar</a>
 
         </form>
 

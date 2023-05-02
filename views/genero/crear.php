@@ -15,7 +15,7 @@
             </div>
 
             <button type="submit" class="btn btn-success">Agregar Genero</button>
-            <a name="" id="" class="btn btn-primary" href="index.php" role="button">Cancelar</a>
+            <a name="" id="" class="btn btn-primary" href="<?= URL_BASE ?>genero" role="button">Cancelar</a>
 
         </form>
     </div>

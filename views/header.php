@@ -25,10 +25,10 @@
                 <a class="nav-link" href="<?= URL_BASE ?>main">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Peliculas</a>
+                <a class="nav-link" href="<?= URL_BASE ?>pelicula">Peliculas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Generos</a>
+                <a class="nav-link" href="<?= URL_BASE ?>genero">Generos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?= URL_BASE ?>usuario">Usuarios</a>
