@@ -6,5 +6,8 @@ class Erorres extends Controller
     {
         parent::__construct();
         $this->view->render('errores/index');
+//        $this->mensaje = "";
+
     }
+
 }
