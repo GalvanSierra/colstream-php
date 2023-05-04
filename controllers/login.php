@@ -34,4 +34,15 @@ class Login extends Controller
 //            echo "<div class="alert alert-danger">mensaje</div>";
         }
     }
+
+    function logout()
+    {
+        if(!isset($_SESSION['login']))
+        {
+            header('location'.URL_BASE);
+        }else{
+            unset($_SESSION['login']);
+            session_destroy();
+        }
+    }
 }
