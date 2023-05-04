@@ -5,7 +5,6 @@ Primera entrega del Proyecto ColStream para la asignatura Programación Orientad
 Realizado por:
 
 - Galvan Sierra David
-- Restrepo Mira Sebastian
 - Giraldo Gómez Jeisson Stivenson
 
 
