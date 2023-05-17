@@ -1,11 +1,12 @@
-# ColStream con PHP
+# ColStream 
 
-Primera entrega del Proyecto ColStream para la asignatura Programación Orientada a la Web con PHP
+Objetivo: Desarrollar una plataforma web para la visualización de la filmografía colombiana.
+
+Asignatura: Programación Orientada a la Web con PHP
 
 Realizado por:
 
-- Galvan Sierra David
-- Restrepo Mira Sebastian
+- Galván Sierra David
 - Giraldo Gómez Jeisson Stivenson
 
 
