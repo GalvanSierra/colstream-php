@@ -9,6 +9,8 @@ class Main extends Controller
 
     function render()
     {
+        $salida = new login;
+        $salida->logout();
         $this->view->render('main/index');
     }
 }
