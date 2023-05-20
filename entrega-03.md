@@ -13,19 +13,24 @@
 
 ## Requisitos de la tercera entrega
 
-2.Permitir en la parte del password, ver lo que se escribió de contraseña
+2. Permitir en la parte del password, ver lo que se escribió de contraseña
 
 3. Rubrica1 y rubrica 2 deben de funcionar en su 100%
 
-4.Todo el aplicativo debe de funcionar correctamente5
+4. Todo el aplicativo debe de funcionar correctamente5
 
-5.Subir el proyecto a un servidor gratuito
+5. Subir el proyecto a un servidor gratuito
 
-6.Validar que la contraseña sea segura, que tenga: a - Mínimo un carácter especial - Mínimo una mayúscula - Que contenga números - Mínimo una minúscula
+6. Validar que la contraseña sea segura, que tenga:
 
-7.Validar que el campo del correo electrónico después del @ tenga más de 5 caracteres
+  - Mínimo un carácter especial 
+  - Mínimo una mayúscula
+  - Que contenga números
+  - Mínimo una minúscula
 
-## Que se debe de entregar:1
+7. Validar que el campo del correo electrónico después del @ tenga más de 5 caracteres
+
+## Que se debe de entregar:
 
 - Entregar la propuesta del proyecto con las recomendaciones dadas al evaluarlo junto con el que entregaron al principio
 
