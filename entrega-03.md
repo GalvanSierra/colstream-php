@@ -21,7 +21,7 @@
 
 - [ ] Subir el proyecto a un servidor gratuito
 
-- [ ] Validar que la contraseña sea segura, que tenga:
+- [x] Validar que la contraseña sea segura, que tenga:
 
     - Mínimo un carácter especial
     - Mínimo una mayúscula
