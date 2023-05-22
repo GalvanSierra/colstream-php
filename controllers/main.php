@@ -10,7 +10,7 @@ class Main extends Controller
     function render()
     {
         $salida = new login;
-        $salida->logout();
+        //$salida->userExist();
         $this->view->render('main/index');
     }
 }
