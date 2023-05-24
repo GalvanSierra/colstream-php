@@ -4,8 +4,7 @@
 
 - [x] Agregar link para la url del video que abra una nueva ventana
 - [ ] Mostrar el nombre de la personal al iniciar sesión, saludar
-- [ ] Editar el home de la pagina web **(Agregar login para visibilizar el saludo al usuario)**
-- [ ] Agregar sección de administrador
+- [ ] Editar el home de la pagina web **(Agregar metodo login para poder ver la pagina)**
 - [ ] Barra de buscar para usuario, películas, genero
 - [ ] Menu al iniciar sesión, agregar opción de registro **(En proceso)**
 - [ ] **Cerrar sesión**
@@ -21,14 +20,14 @@
 
 - [ ] Subir el proyecto a un servidor gratuito
 
-- [ ] Validar que la contraseña sea segura, que tenga:
+- [x] Validar que la contraseña sea segura, que tenga:
 
     - Mínimo un carácter especial
     - Mínimo una mayúscula
     - Que contenga números
     - Mínimo una minúscula
 
-7. Validar que el campo del correo electrónico después del @ tenga más de 5 caracteres
+- [ ] Validar que el campo del correo electrónico después del @ tenga más de 5 caracteres
 
 ## Que se debe de entregar:
 
