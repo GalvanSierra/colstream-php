@@ -24,9 +24,12 @@
             </div>
 
             <button type="submit" class="btn btn-success">Iniciar sesion</button>
-<!--            <a id="" class="btn btn-primary" href="--><?php //= URL_BASE ?><!--usuario" role="button">Cancelar</a>-->
+            <!--            <a id="" class="btn btn-primary" href="-->
+            <?php //= URL_BASE ?><!--usuario" role="button">Cancelar</a>-->
 
         </form>
+
+        <a href="<?=URL_BASE?>register">Registrase</a>
 
     </div>
     <div class="card-footer text-muted">
