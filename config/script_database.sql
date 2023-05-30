@@ -86,3 +86,4 @@ create table peliculas_generos
     foreign key (id_pelicula) references peliculas (id)
 );
 
+insert into usuarios (nickname, email, password) values ("admin","admin@gmail.com","12345")

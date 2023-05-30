@@ -9,7 +9,7 @@ class LoginModel extends Model
         parent::__construct();
     }
 
-    public function insert($usuario)
+/*     public function insert($usuario)
     {
         $sql = "insert into usuarios (id, nickname, email, password) values (null,:nickname,:email,:password)";
         $query = $this->db->connect()->prepare($sql);
@@ -17,9 +17,9 @@ class LoginModel extends Model
         $query->bindParam(":email", $usuario['email']);
         $query->bindParam(":password", $usuario['password']);
         $query->execute();
-    }
+    } */
 
-    public function getUsuarios()
+/*     public function getUsuarios()
     {
         $items = [];
 
@@ -41,12 +41,13 @@ class LoginModel extends Model
         } catch (PDOException $e) {
             return [];
         }
-    }
+    } */
 
 
 //
     public function validarUsuario($usuario)
     {
+        
         $sql = "select * from usuarios where email = :email and password = :password";
         $query = $this->db->connect()->prepare($sql);
         $query->bindParam(":email", $usuario->email);
@@ -70,7 +71,7 @@ class LoginModel extends Model
         }
     }
 
-    public function update($usuario)
+/*     public function update($usuario)
     {
 
         $sql = "UPDATE usuarios SET nickname = :nickname, email = :email, password = :password where id= :id";
@@ -102,5 +103,5 @@ class LoginModel extends Model
             echo $e;
             return false;
         }
-    }
-}
+    }*/
+} 

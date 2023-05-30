@@ -21,8 +21,9 @@ class Login extends Controller
         $usuario = new UsuarioBD();
         $usuario->email = $email;
         $usuario->password = $password;
-
-        if ($this->model->validarUsuario($usuario)) {
+        $model = new LoginModel();
+        
+        if ($model->validarUsuario($usuario)) {
             $archivoController = 'controllers/main.php';
             require_once $archivoController;
             $controller = new Main();

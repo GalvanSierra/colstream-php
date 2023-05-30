@@ -23,22 +23,52 @@ class Usuario extends Controller
         $this->view->render('usuario/crear');
     }
 
+    function validarClave()
+    {
+        $password = $_POST["password"];
+        if (!preg_match('`[a-z]`',$password))
+        {
+            echo "La clave debe tener al menos una letra minúscula.";
+            return false;
+        }
+        if (!preg_match('`[A-Z]`',$password))
+        {
+            echo "La clave debe tener al menos una letra mayúscula.";
+            return false;
+        }
+        if (!preg_match('`[0-9]`',$password))
+        {
+            echo "La clave debe tener al menos un caracter numérico.";
+            return false;
+        }
+        if (!preg_match('`[;:\.,!¡\?¿@#\$%\^&\-_+=\(\)\[\]\{\}]`',$password))
+        {
+            echo "La clave debe tener al menos un caracter especial.";
+            return false;
+        }else{
+            return true;
+        };
+    }
     function registrarUsuario()
     {
+        $error_encontrado="";
 
         $nickname = $_POST["nickname"];
         $email = $_POST["email"];
         $password = $_POST["password"];
+        if ($this->validarClave())
+        {
+            $usuario = [
+                'nickname' => $nickname,
+                'email' => $email,
+                'password' => $password
+            ];
 
-        $usuario = [
-            'nickname' => $nickname,
-            'email' => $email,
-            'password' => $password
-        ];
-
-        $this->model->insert($usuario);
-
-        $this->render();
+            $this->model->insert($usuario);
+            $this->render();
+        }else{
+            $this->view->render('usuario/crear');
+        }
     }
 
     function editarUsuario($param = null)
@@ -56,7 +86,7 @@ class Usuario extends Controller
         $nickname = $_POST["nickname"];
         $email = $_POST["email"];
         $password = $_POST["password"];
-
+        
         $usuarioQuery = [
             'id' => $id,
             'nickname' => $nickname,

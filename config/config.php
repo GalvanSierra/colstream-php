@@ -1,6 +1,6 @@
 <?php
 
-const  URL_BASE = 'http://localhost/ColStream_PHP/';
+const  URL_BASE = 'http://localhost/colstream-php/';
 const HOST = 'localhost';
 const DB = 'colstream';
 const USER = 'root';

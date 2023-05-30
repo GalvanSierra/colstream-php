@@ -74,4 +74,10 @@ class Genero extends Controller
 
         $this->render();
     }
+
+    function search()
+    {
+        $this->model->search();
+        $this->render();
+    }
 }

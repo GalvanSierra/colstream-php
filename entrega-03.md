@@ -2,31 +2,31 @@
 
 ## Correcciones pendientes
 
-- [ ] Agregar link para la url del video que abra una nueva ventana **(En proceso)**
-- [ ] Mostrar el nombre de la personal al iniciar sesión, saludar 
-- [ ] Editar el home de la pagina web **(En proceso)**
+- [x] Agregar link para la url del video que abra una nueva ventana
+- [ ] Mostrar el nombre de la personal al iniciar sesión, saludar
+- [ ] Editar el home de la pagina web **(Agregar login para visibilizar el saludo al usuario)**
 - [ ] Agregar sección de administrador
 - [ ] Barra de buscar para usuario, películas, genero
 - [ ] Menu al iniciar sesión, agregar opción de registro **(En proceso)**
-- [ ] Al ingresar sección, botón de cerrar sesión
-- [ ] Agregar botón para visualizar contraseña al editar usuario **(En proceso)**
+- [ ] **Cerrar sesión**
+- [x] Agregar botón para visualizar contraseña al editar usuario
 
 ## Requisitos de la tercera entrega
 
-2. Permitir en la parte del password, ver lo que se escribió de contraseña
+- [x] Permitir en la parte del password, ver lo que se escribió de contraseña
 
-3. Rubrica1 y rubrica 2 deben de funcionar en su 100%
+- [ ] Rubrica1 y rubrica 2 deben de funcionar en su 100%
 
-4. Todo el aplicativo debe de funcionar correctamente5
+- [ ] Todo el aplicativo debe de funcionar correctamente
 
-5. Subir el proyecto a un servidor gratuito
+- [ ] Subir el proyecto a un servidor gratuito
 
-6. Validar que la contraseña sea segura, que tenga:
+- [x] Validar que la contraseña sea segura, que tenga:
 
-  - Mínimo un carácter especial 
-  - Mínimo una mayúscula
-  - Que contenga números
-  - Mínimo una minúscula
+    - Mínimo un carácter especial
+    - Mínimo una mayúscula
+    - Que contenga números
+    - Mínimo una minúscula
 
 7. Validar que el campo del correo electrónico después del @ tenga más de 5 caracteres
 

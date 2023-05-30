@@ -92,4 +92,30 @@ class GeneroModel extends Model
             return false;
         }
     }
+
+    public function search()
+    {
+        $items = [];
+        if(isset($_GET["enviar"]))
+        {
+            $busqueda = $_GET["busqueda"];
+            try {
+                $sql = "select * from generos where nombre LIKE '%".$busqueda."%'";;
+                $query = $this->db->connect()->query($sql);
+    
+                while ($row = $query->fetch()) {
+                    $genero = new generoBD();
+                    $genero->id = $row['id'];
+                    $genero->nombre = $row['nombre'];
+    
+                    array_push($items, $genero);
+                }
+    
+                return $items;
+            } catch (PDOException $e) {
+                return [];
+            }
+        }
+    }
+
 }
