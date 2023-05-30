@@ -3,20 +3,20 @@
 ## Correcciones pendientes
 
 - [x] Agregar link para la url del video que abra una nueva ventana
-- [ ] Mostrar el nombre de la personal al iniciar sesión, saludar
 - [ ] Editar el home de la pagina web **(Agregar metodo login para poder ver la pagina)**
-- [ ] Barra de buscar para usuario, películas, genero
-- [ ] Menu al iniciar sesión, agregar opción de registro **(En proceso)**
-- [ ] **Cerrar sesión**
+  - [ ] Mostrar el nombre de la personal al iniciar sesión, saludar
+- [ ] Barra de buscar para usuario, películas, genero **(En progreso)**
+- [x] Menu al iniciar sesión, agregar opción de registro
+- [ ] **Boton para cerrar sesión**
 - [x] Agregar botón para visualizar contraseña al editar usuario
 
 ## Requisitos de la tercera entrega
 
 - [x] Permitir en la parte del password, ver lo que se escribió de contraseña
 
-- [ ] Rubrica1 y rubrica 2 deben de funcionar en su 100%
+- [x] Rubrica1 y rubrica 2 deben de funcionar en su 100%
 
-- [ ] Todo el aplicativo debe de funcionar correctamente
+- [x] Todo el aplicativo debe de funcionar correctamente
 
 - [ ] Subir el proyecto a un servidor gratuito
 
