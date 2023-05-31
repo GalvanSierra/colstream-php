@@ -13,7 +13,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive-sm">
-                <table class="table">
+                <table class="table" id="tabla_id">
                     <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -22,6 +22,7 @@
                         <th scope="col">Fecha de Estreno</th>
                         <th scope="col">Foto</th>
                         <th scope="col">URL</th>
+                        <th scope="col">Acciones</th>
                     </tr>
                     </thead>
                     <tbody>
