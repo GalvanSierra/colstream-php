@@ -46,7 +46,6 @@
                 </div>
             </div>
             <br>
-<!--            <input type="button" value="cambiar constraseña" onclick="casa()">-->
 
             <button type="submit" class="btn btn-success">Actualizar Usuario</button>
             <a name="" id="" class="btn btn-primary" href="<?= URL_BASE ?>usuario" role="button">Salir</a>

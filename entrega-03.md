@@ -3,11 +3,11 @@
 ## Correcciones pendientes
 
 - [x] Agregar link para la url del video que abra una nueva ventana
-- [ ] Editar el home de la pagina web **(Agregar metodo login para poder ver la pagina)**
-  - [ ] Mostrar el nombre de la personal al iniciar sesión, saludar
-- [ ] Barra de buscar para usuario, películas, genero **(En progreso)**
+- [ ] Editar el home de la pagina web **(Agregar método login para poder ver la pagina)**
+    - [ ] Mostrar el nombre de la personal al iniciar sesión, saludar
+- [x] Barra de buscar para usuario, películas, genero
 - [x] Menu al iniciar sesión, agregar opción de registro
-- [ ] **Boton para cerrar sesión**
+- [ ] **Botón para cerrar sesión**
 - [x] Agregar botón para visualizar contraseña al editar usuario
 
 ## Requisitos de la tercera entrega

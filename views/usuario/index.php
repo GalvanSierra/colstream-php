@@ -13,7 +13,7 @@
     <div class="card-body">
 
         <div class="table-responsive-sm">
-            <table class="table">
+            <table class="table" id="tabla_id">
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -29,7 +29,7 @@
                         <td scope="row"><?= $usuario->id ?></td>
                         <td><?= $usuario->nickname ?></td>
                         <td><?= $usuario->email ?></td>
-                        <td>***********</td>
+                        <td>*********</td>
                         <td>
                             <a class="btn btn-info" href="<?= URL_BASE . 'usuario/editarUsuario/' . $usuario->id ?>"
                                role="button">Editar</a>

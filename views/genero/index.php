@@ -5,26 +5,17 @@
 <br/>
 <div class="card">
 
-    <br>
-    <div class = "container-fluid">
-    <form action="" method="get"></form>
-        <input class="form-control me-2" type="search" placeholder="Buscar"
-        name="busqueda">
-        <button class="btn btn-outline-info" type="submit" name="enviar"><b>Buscar</b></button>
-        <br><br>
-    </div>
-
     <div class="card-header">
 
         <a name="" id="" class="btn btn-primary"
            href="<?= URL_BASE ?>genero/renderRegistrarGenero" role="button">Agregar Genero
         </a>
 
-       
+
     </div>
     <div class="card-body">
         <div class="table-responsive-sm">
-            <table class="table">
+            <table class="table" id="tabla_id">
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
