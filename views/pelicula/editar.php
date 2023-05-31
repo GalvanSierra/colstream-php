@@ -3,7 +3,7 @@
     <br>
     <div class="card">
         <div class="card-header">
-            Peliculas
+            Películas
         </div>
 
         <div class="card-body">
@@ -54,10 +54,10 @@
                     <input type="url"
                            value="<?= $this->pelicula->url_video ?>"
                            class="form-control" name="url_video" id="url_video" aria-describedby="helpId"
-                           placeholder="URL Pelicula">
+                           placeholder="URL Película">
                 </div>
 
-                <button type="submit" class="btn btn-success">Actualizar Pelicula</button>
+                <button type="submit" class="btn btn-success">Actualizar Película</button>
                 <a name="" id="" class="btn btn-primary" href="<?= URL_BASE ?>pelicula" role="button">Salir</a>
 
 

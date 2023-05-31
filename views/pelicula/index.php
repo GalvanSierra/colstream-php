@@ -1,13 +1,13 @@
 <?php require 'views/header.php'; ?>
 
     <br/>
-    <h3>Pelicula</h3>
+    <h3>Película</h3>
     <br/>
     <div class="card">
         <div class="card-header">
 
             <a name="" id="" class="btn btn-primary"
-               href="<?= URL_BASE ?>pelicula/renderRegistrarPelicula" role="button">Agregar Pelicula
+               href="<?= URL_BASE ?>pelicula/renderRegistrarPelicula" role="button">Agregar Película
             </a>
 
         </div>
@@ -18,7 +18,7 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Titulo</th>
-                        <th scope="col">Sipnosis</th>
+                        <th scope="col">Sinopsis</th>
                         <th scope="col">Fecha de Estreno</th>
                         <th scope="col">Foto</th>
                         <th scope="col">URL</th>

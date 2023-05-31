@@ -31,10 +31,10 @@
                 <a class="nav-link" href="<?= URL_BASE ?>main">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= URL_BASE ?>pelicula">Peliculas</a>
+                <a class="nav-link" href="<?= URL_BASE ?>pelicula">Películas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= URL_BASE ?>genero">Generos</a>
+                <a class="nav-link" href="<?= URL_BASE ?>genero">Géneros</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?= URL_BASE ?>usuario">Usuarios</a>
